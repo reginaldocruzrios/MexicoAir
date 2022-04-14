@@ -1,0 +1,525 @@
+:root{
+
+    --fuentePrincipal: 'Fira Sans', sans-serif;
+
+    --morado: #81066C;
+    --gris:#DFDEDF;
+    --blanco:#ffffff;
+    --negro: #000000;
+    --azulMorado: #1a073f;
+    --fondoClaro: #FAF7F7;
+    --grisFuerte:#979697;
+    --moradoClaro: #954086;
+
+    --negroClaro: #1f1b1b;
+
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6rem;
+}
+h1{font-size: 4rem;}
+h2{font-size: 3rem;}
+h3{font-size: 2.5rem;}
+
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+
+/* globales */
+.contenedor{
+    max-width: 1100px;
+    width: 90%;
+    margin: 0 auto;
+}
+.no-margin{
+    margin: 0;
+}
+.centrado{
+    text-align: center;
+}
+.bg-pagina{
+    background-color: var(--gris);
+}
+
+/* header */
+.contenedor__header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+@media (min-width: 768px) {
+    .contenedor__header{
+        flex-direction: row;
+    }
+}
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+.header__logo i{
+    margin-left: 1rem;
+    font-size: 3rem;
+    color: var(--azulMorado);
+}
+.header__locacion{
+    background-color: var(--fondoClaro);
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+    .header__locacion{
+        margin-bottom: 0;
+    }
+}
+.locacion__idioma{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+/* barra */
+.header__barra{
+    margin-bottom: 1rem;
+}
+@media (min-width: 992px) {
+    .header__barra{
+        display: none;
+    }
+}
+.barra-icono {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.barra-icono i{
+    color: var(--negro);
+    font-size: 3rem;
+}
+
+
+/* navegacion */
+.header__menu{
+    background-color: var(--fondoClaro);
+    padding: 2rem;
+    margin-top: 3rem;
+    display: none;
+}
+@media (min-width: 992px) {
+    .header__menu{
+        display: block;
+    }    
+}
+.navegacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+@media (min-width: 768px) {
+    .navegacion { 
+        flex-direction: row;
+        justify-content: center;
+        gap: 6rem;
+    }
+}
+.navegacion a{
+    color: var(--negro);
+}
+.navegacion a:hover {
+    text-decoration: underline;
+}
+
+/* hero */
+.header__hero{
+    background-image: url(../img/fondoprincipal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 90rem;
+}
+@media (min-width: 992px) {
+    .header__hero{
+        background-image: url(../img/fondoprincipal.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: 45rem;
+    }
+}
+.contendido__hero{
+    padding-top: 5rem;
+}
+.contenido__h2{
+    background-color: var(--gris);
+    border-radius: 1rem;
+    padding: 3rem;
+}
+.contenido__h2 h2{
+    text-align: center;
+}
+
+/* formulario */
+.formulario{
+    background-color: var(--fondoClaro);
+    padding: 5rem;
+}
+label{
+    font-size: 2rem;
+    color: var(--grisFuerte);
+}
+select,
+input {
+    padding: 1rem;
+    border-radius: .2rem;
+    border: none;
+}
+.campo-label{
+    margin-bottom: 1rem;
+}
+.campo-label:last-of-type{
+    margin-bottom: 0;
+}
+.campo-label input,
+.campo-label select{
+    margin-top: 1rem;
+    width: 100%;
+}
+input[type="submit"]{
+    background-color: var(--morado);
+    padding: 1.5rem;
+    border-radius: 2rem;
+    color: var(--blanco);
+    transition: all .3s ease;
+}
+input[type="submit"]:hover{
+    cursor: pointer;
+    font-weight: 700;
+    background-color: var(--azulMorado);
+}
+.campo-radio{
+    max-width: 45rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+.campos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (min-width: 768px) {
+    .campos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+@media (min-width: 992px) {
+    .campos{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 1rem;
+    }
+}
+
+/* secciones */
+.secciones{
+    padding-top: 4rem;
+    display: flex;
+    gap: 1.5rem;
+}
+.secciones a{
+    color: var(--negro);
+}
+.contenido-principal{
+    margin-top: 7rem;
+}
+.contenido-principal h2{
+    font-size: 3.5rem;
+}
+@media (min-width: 768px) {
+    .buscadores-principal{
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 3rem;
+    }
+}
+.buscadores-principal input{
+    width: 100%;
+    padding: 1.7rem 5rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    border: none;
+}
+.buscadores-principal input[type="text"]{
+    background-image: url(../img/avion.JPG);
+    background-repeat: no-repeat;
+    background-position: calc(1% + 1rem) calc(1% + .8rem);
+}
+.buscadores-principal input[type="number"]{
+    padding: 1.7rem 6rem;
+    background-image: url(../img/dinero.JPG);
+    background-repeat: no-repeat;
+    background-position: calc(1% + 1rem) calc(1% + .8rem);
+}
+
+/* viajes */
+@media (min-width: 480px) {
+    .contenedor-viajes{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+@media (min-width: 992px) {
+    .contenedor-viajes{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+}
+.viaje{
+    background-color: var(--fondoClaro);
+    margin-bottom: 1rem;
+}
+.viaje img{
+    width: 100%;
+    height: 37%;
+    border-radius: 5px;
+}
+.viaje-info{
+    padding: 1.5rem;
+}
+.viaje-info h4{
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+.viaje-precio{
+    text-align: right;
+    padding-top: 4rem;
+}
+.precio{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--morado);
+    margin: 0;
+}
+.precio span{
+    text-transform: uppercase;
+}
+.clase{
+    font-size: 1.2rem;
+    color: var(--grisFuerte);
+}
+.btn{
+    background-color: var(--morado);
+    color: var(--blanco);
+    padding: 1rem 1.5rem;
+    text-align: center;
+    font-weight: 700;
+    display: block;
+    margin-top: 2rem;
+    border-radius: 1rem;
+}
+.viaje-boton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btn-ver{
+    background-color: var(--moradoClaro);
+    padding: 1rem 7rem;
+}
+.tarifa{
+    font-size: 1.2rem;
+    color: var(--negro);
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+/* tabla de vuelos */
+.tabla-viajes{
+    overflow-x: auto;
+}
+.listado-viajes{
+    min-width: 1100px;
+    padding: 2rem;
+}
+.listado-viajes th{
+    text-align: left;
+    padding: 2rem;
+    background-color: var(--grisFuerte);
+    border-bottom: 1px solid var(--negro);
+}
+.listado-viajes td{
+    padding: 1.7rem;
+    background-color: var(--fondoClaro);
+}
+
+/* seleccion-vuelos */
+.enlace-vuelos{
+    background-color: var(--fondoClaro);
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: background-color .3s ease;
+}
+.enlace-vuelos:hover{
+    cursor: pointer;
+    background-color: var(--grisFuerte);
+}
+.vuelo{
+    color: var(--negro);
+    font-size: 3rem;
+    padding-left: 4rem;
+    margin: 0;
+}
+.vuelo i{
+    margin-right: 2rem;
+    font-size: 2.5rem;
+    color: var(--morado);
+}
+.contendor-vuelos{
+    background-color: var(--fondoClaro);
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    display: none;
+}
+.listado-vuelos{
+    padding: 2rem;
+}
+.listado-vuelos p{
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* tip viajero */
+.tips-viajes{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+@media (min-width: 768px) {
+    .tips-viajes{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.tips-imagen{
+    background-color: var(--fondoClaro);
+    padding: 1.2rem;
+    margin-bottom: 4rem;
+}
+.tips-imagen p{
+    color: var(--negro);
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+}
+
+/* footer */
+.footer{
+    padding-top: 3rem;
+    background-color: var(--negroClaro);
+    color: var(--blanco);
+}
+@media (min-width: 768px) {
+    .contenedor-footer{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.opciones{
+    padding: 1rem;
+}
+.nav-opciones a{
+    display: block;
+    color: var(--grisFuerte);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.nav-opciones a:hover{
+    text-decoration: underline;
+}
+.nav-redes a i{
+    background-color: var(--blanco);
+    color: var(--negro);
+    border-radius: 100%;
+    padding: .5rem;
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+.nav-aplicacion {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 3rem;
+}
+@media (min-width: 768px) {
+    .nav-aplicacion{
+        justify-content: center;
+        align-items: center;
+    }
+}
+.nav-aplicacion a i {
+    color: var(--blanco);
+    font-size: 4rem;
+}
+.enlaces-externos{
+    margin-top: 5rem;
+}
+.externos{
+    text-align: center;
+}
+@media (min-width: 992px) {
+    .externos{
+        display: flex;
+        justify-content: space-around;
+    }
+}
+.externos p{
+    font-size: 1.1rem;
+    color: var(--grisFuerte);
+}
+
+.externos p:hover {
+    cursor: pointer;
+    color: var(--blanco);
+}
+.copy{
+    text-align: center;
+    padding-top: 2rem;
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--grisFuerte);
+}
+
+
+
+
+
+/* creadas en JS */
+.mostrar{
+    display: block;
+}
+.border{
+    border-bottom: 1px solid var(--morado);
+}
